@@ -1,0 +1,62 @@
+#olvidar {
+    font-size: 17px;
+}
+
+.t {
+    font-family: "Oswald" !important;
+    font-size: 60px;
+}
+
+.e {
+        width: 700px;
+        height: auto;
+}
+
+.z {
+    style:"vertical-align", inherit;
+    style:"vertical-align", inherit;
+}
+
+.c {
+    font-size: 30px;
+}
+
+#abc {
+    font-size: 17px;
+}
+
+#menu {
+    font-size: 20px;
+}
+
+#w {
+    font-size: 25px;
+}
+
+#e {
+    font-family: "Oswald";
+    text-align: center;
+}
+
+#r {
+    background-color: rgb(85, 245, 85);
+}
+
+#t {
+          padding: 20px;
+          border-width: 2px;
+          border-style: solid;
+          border-color: gray;       
+}
+
+#y {
+    margin: 5px;
+}
+
+.pa {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
