@@ -1,6 +1,4 @@
-name: Deploy to Production
 name: deploy HTML to Github pages
-
 on:
   push:
     branches: ['main']
