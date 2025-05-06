@@ -1,5 +1,5 @@
 name: Deploy to Production
-nombre: deploy HTML to Github pages
+name: deploy HTML to Github pages
 
 on:
   push:
