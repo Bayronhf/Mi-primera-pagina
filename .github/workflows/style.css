@@ -1,0 +1,100 @@
+
+#olvidar {
+    font-size: 17px;
+}
+
+.t {/*titulo*/
+    font-family: "Oswald", sans-serif !important;
+    font-size: 60px;
+}
+
+.bb {
+    cursor: pointer !important;
+    
+      
+}
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    box-shadow: none !important;
+}
+  
+
+.ee {
+    padding-top: 17px !important;
+}
+
+.qq {/*banner*/
+    position: fixed !important;
+    top: 0px !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    padding-top: 10px !important;
+}
+
+.e {/*imagen*/
+        width: 700px;
+        height: auto;
+        transition: all 0.3s ease-in-out !important;
+    }
+
+.e:hover {
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5) !important;
+    transform: scale(1.05) !important;
+}
+
+.k {
+    width: 50% !important;
+}
+
+tr:hover td {
+    background-color: rgb(24, 188, 156) !important;
+}
+
+.z {
+    vertical-align: inherit;
+    vertical-align: inherit;
+}
+
+.c {
+    font-size: 30px;
+}
+
+#abc {
+    font-size: 17px;
+}
+
+#menu {
+    font-size: 20px;
+}
+
+#w {
+    font-size: 25px;
+}
+
+#e {
+    font-family: "Oswald";
+    text-align: center;
+}
+
+#r {
+    background-color: rgb(85, 245, 85);
+}
+
+#t {
+          padding: 20px;
+          border-width: 2px;
+          border-style: solid;
+          border-color: gray;       
+}
+
+#y {
+    margin: 5px;
+}
+
+.pa {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
