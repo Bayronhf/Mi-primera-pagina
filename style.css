@@ -8,6 +8,13 @@
     font-size: 60px;
 }
 
+@media (max-width: 600px)  {
+    .hh {
+        padding: 10px !important;
+        font-size: 0.8rem !important;
+    }
+ }
+
 .bb {
     cursor: pointer !important;
     
