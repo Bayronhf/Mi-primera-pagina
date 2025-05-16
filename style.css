@@ -1,4 +1,3 @@
-
 #olvidar {
     font-size: 17px;
 }
@@ -66,8 +65,22 @@ tr:hover td {
     font-size: 30px;
 }
 
+.xx {/*letras banner*/
+    font-size: 1.5vw !important; 
+    padding: 10px !important;
+}
+
+.aaa {/*menu desplegable*/
+    font-size: 15px !important;
+}
+
 #abc {
     font-size: 17px;
+}
+
+.dd {/*imagen-logo*/
+    width: 50px !important;
+    height: auto !important;
 }
 
 #menu {
