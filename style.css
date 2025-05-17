@@ -7,7 +7,7 @@
     font-size: 60px;
 }
 
-@media (max-width: 600px)  {
+@media (max-width: 600px)  {/*footer*/
     .hh {
         padding: 10px !important;
         font-size: 0.8rem !important;
@@ -66,8 +66,13 @@ tr:hover td {
 }
 
 .xx {/*letras banner*/
-    font-size: 1.5vw !important; 
-    padding: 10px !important;
+     font-size: 20px !important;
+}
+
+@media (max-width: 600px) {
+    .xx {/*letras banner*/
+      font-size: 1.2rem !important;
+  }
 }
 
 .aaa {/*menu desplegable*/
