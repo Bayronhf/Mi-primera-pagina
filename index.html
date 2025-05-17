@@ -9,14 +9,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#2196f3">
+  <meta name="theme-color" content="#000">
   <a href="chatbot.html">Chatbot</a>
   <script src="script.js" defer></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg bg-primary qq" data-bs-theme="dark">
     <div class="container-fluid">
-      <image class="navbar-brand dd" src="logo.png">
+      <a href="#" onclick="scrollToClass('t')"><image class="navbar-brand dd" src="logo.png"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Cambiar navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -51,6 +51,15 @@
       </div>
     </div>
   </nav>
+   <div id="loader">CARGANDO...</div>
+  <div id="app" style="display:none;">
+  </div>
+  <script>
+    window.addEventListener("load", function () {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("app").style.display = "block";
+    });
+  </script>
   <main class="container my-5 ee">
     <div class="card p-4">
       <h1 class="text-center text-primary t">MI PRIMERA PÁGINA</h1>
@@ -153,7 +162,6 @@
       </section>
     </div>
   </main>
-
   <footer class="text-center mt-4 hh">
     <p><small>© 2025 Mi primera página - Todos los derechos reservados</small></p>
   </footer>

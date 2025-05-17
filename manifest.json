@@ -1,10 +1,11 @@
 {
   "name": "Mi primera página",
-  "short_name": "MiPágina",
+  "short_name": "Mi página",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#2196f3",
+  "theme_color": "#000",
+  "description": "Esta es mi primera página web.",
   "icons": [
     {
       "src": "logo.png",
@@ -12,7 +13,7 @@
       "type": "image/png"
     },
     {
-      "src": "logo.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
