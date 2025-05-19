@@ -4,3 +4,4 @@ function scrollToClass(className) {
     element.scrollIntoView({ behavior: 'smooth' });
   }
 }
+
