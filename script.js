@@ -221,7 +221,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-game.addEventListener('click', jump);
+game.addEventListener('mousedown', jump);
 restartButton.addEventListener('click', restart);
 
 for (let i = 0; i < 3; i++) {
