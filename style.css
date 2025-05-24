@@ -1,0 +1,281 @@
+#olvidar {
+    font-size: 17px;
+}
+
+.t {/*titulo*/
+    font-family: "Oswald", sans-serif !important;
+    font-size: 60px;
+}
+
+@media (max-width: 600px)  {/*footer*/
+    .hh {
+        padding: 10px !important;
+        font-size: 0.8rem !important;
+    }
+ }
+
+.bb {
+    cursor: pointer !important;
+    
+      
+}
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    box-shadow: none !important;
+}
+  
+
+.ee {
+    padding-top: 17px !important;
+}
+
+.qq {/*banner*/
+    position: fixed !important;
+    top: 0px !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    padding-top: 10px !important;
+}
+
+.e {/*imagen*/
+        width: 700px;
+        height: auto;
+        transition: all 0.3s ease-in-out !important;
+    }
+
+.e:hover {
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5) !important;
+    transform: scale(1.05) !important;
+}
+
+.k {
+    width: 50% !important;
+}
+
+tr:hover td {
+    background-color: rgb(24, 188, 156) !important;
+}
+
+.z {
+    vertical-align: inherit;
+    vertical-align: inherit;
+}
+
+.c {
+    font-size: 30px;
+}
+
+.xx {/*letras banner*/
+     font-size: 20px !important;
+}
+
+@media (max-width: 600px) {
+    .xx {/*letras banner*/
+      font-size: 1.2rem !important;
+  }
+}
+
+.aaa {/*menu desplegable*/
+    font-size: 15px !important;
+}
+
+#abc {
+    font-size: 17px;
+}
+
+.dd {/*imagen-logo*/
+    width: 50px !important;
+    height: auto !important;
+}
+
+.dd:hover {
+    filter: brightness(0.5) !important;
+    transition: 0.3s !important;
+}
+
+#menu {
+    font-size: 20px;
+}
+
+#w {
+    font-size: 25px;
+}
+
+#e {
+    font-family: "Oswald";
+    text-align: center;
+}
+
+#r {
+    background-color: rgb(85, 245, 85);
+}
+
+#t {
+          padding: 20px;
+          border-width: 2px;
+          border-style: solid;
+          border-color: gray;       
+}
+
+#y {
+    margin: 5px;
+}
+
+.pa {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.centrar-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#contenedor {
+    flex-wrap: wrap;
+    background-color: black;
+    flex-direction: column;
+}
+
+#color {
+    font-size: 20px;
+    color: white;
+}
+
+#boton {
+    background-color: hsl(168, 88%, 22%);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#boton:hover {
+    background-color: hwb(168 2% 72%);
+}
+
+#pantalla{
+    margin: 0;
+    overflow: hidden;
+    background: rgb(16, 141, 224);
+}
+
+#game {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom, #1a1a1a 0%, #4d4d4d 100%);
+    overflow: hidden;
+}
+
+#player {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-image: url('imagenes/caminar1.png');
+    background-size: cover;
+    background-position: center;
+    bottom: 50px;
+    left: 50px;
+}
+
+.obstacle {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: #55aaff;
+    bottom: 50px;
+}
+
+#ground {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    background: linear-gradient(to bottom, #555 0%, #222 100%);
+}
+
+.building {
+    position: absolute;
+    bottom: 50px;
+    background: #444;
+    width: 80px;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    display: none;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#restart {
+    background: #ff5555;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) { #game {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+  #player {
+    width: 30px;
+    height: 50px;
+  }
+
+  .obstacle {
+    width: 20px;
+    height: 30px;
+  }
+
+  .building {
+    width: 60px;
+  }
+
+  #score {
+    font-size: 18px;
+  }
+
+  #gameOver {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  #restart {
+    padding: 7px 13px;
+    margin-top: 13px;
+    font-size: 12px;
+}
+}
