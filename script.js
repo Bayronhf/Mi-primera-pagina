@@ -54,7 +54,6 @@ const restartButton = document.getElementById('restart');
 
 let isJumping = false;
 let gravity = 0.9;
-let jumpHeight = 15;
 let playerY = 0;
 let playerVelocity = 0;
 let obstacles = [];
@@ -62,6 +61,13 @@ let buildings = [];
 let gameSpeed = 5;
 let score = 0;
 let gameActive = true;
+let currentWalk = 1;
+let walkFrameCounter = 0;
+let jumpHeight = 15;
+
+if (/Android/i.test(navigator.userAgent)) {
+    jumpHeight = 11;
+}
 
 function jump() {
     if (!isJumping && gameActive) {
@@ -115,6 +121,19 @@ function updatePlayer() {
     }
 
     player.style.bottom = `${50 - playerY}px`;
+}
+
+function animatePlayer() {
+    if (isJumping) {
+        player.style.backgroundImage = 'url("imagenes/saltar.png")';
+    } else {
+        walkFrameCounter++;
+        if (walkFrameCounter > 5) {
+            currentWalk = currentWalk === 1 ? 2 : 1;
+            player.style.backgroundImage = `url("imagenes/caminar${currentWalk}.png")`;
+            walkFrameCounter = 0;
+        }
+    }
 }
 
 function updateObstacles() {
@@ -175,6 +194,7 @@ function gameOver() {
 }
 
 function restart() {
+    jumpHeight = /Android/i.test(navigator.userAgent) ? 11 : 15;
     obstacles.forEach(obstacle => obstacle.element.remove());
     obstacles = [];
     buildings.forEach(building => building.element.remove());
@@ -196,6 +216,7 @@ function gameLoop() {
     updatePlayer();
     updateObstacles();
     updateBuildings();
+    animatePlayer();
 
     if (gameActive) {
         updateScore();
@@ -207,7 +228,9 @@ function gameLoop() {
         if (Math.random() < 0.005) {
             createBuilding();
         }
-    }
+    }   else {
+            player.style.backgroundImage = "url('imagenes/caminar1.png')";
+        }
 
     requestAnimationFrame(gameLoop);
 }
