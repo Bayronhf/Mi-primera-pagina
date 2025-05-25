@@ -45,6 +45,10 @@ boton.addEventListener("click", function() {
 )
 
 //juego 2//
+function toggleMenu(id) {
+  const content = document.getElementById(id);
+  content.style.display = (content.style.display === 'block') ? 'none' : 'block';
+}
 
 const player = document.getElementById('player');
 const game = document.getElementById('game');

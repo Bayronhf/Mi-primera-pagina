@@ -279,3 +279,33 @@ a {
     font-size: 12px;
 }
 }
+
+.meu {
+  margin: 20px 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+.menu-toggle {
+  width: 100%;
+  padding: 12px;
+  background-color: #52b79b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: left;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.menu-toggle:hover {
+  background-color: hsl(163, 36%, 48%);
+}
+
+.menu-content {
+  display: none;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
