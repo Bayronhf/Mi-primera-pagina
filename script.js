@@ -6,6 +6,32 @@ function scrollToClass(className) {
   }
 }
 
+//el chatbot//
+
+  async function enviar() {
+      const input = document.getElementById("userInput").value;
+      const respuestaEl = document.getElementById("respuesta");
+
+      const response = await fetch("https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta", {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer ",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          inputs: "<|user|>\nHola\n<|assistant|>"
+
+        })
+      });
+
+      const data = await response.json();
+      if (data.error) {
+        respuestaEl.textContent = "Error: " + data.error;
+      } else {
+        respuestaEl.textContent = data.generated_text || JSON.stringify(data, null, 2);
+      }
+    }
+
 //juego 1//
 
 const color = document.getElementById('color');
