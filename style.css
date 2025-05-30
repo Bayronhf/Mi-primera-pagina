@@ -29,7 +29,7 @@ input[type="checkbox"]:focus {
     padding-top: 17px !important;
 }
 
-.qq {/*banner*/
+.qq, .hhhh {/*banner*/
     position: fixed !important;
     top: 0px !important;
     width: 100% !important;
@@ -88,9 +88,15 @@ tr:hover td {
     height: auto !important;
 }
 
+.hy {
+    margin-right: 20px;
+    margin-left: -20px;
+}
+
 .dd:hover {
     filter: brightness(0.5) !important;
     transition: 0.3s !important;
+    cursor: pointer;
 }
 
 #menu {
@@ -345,3 +351,32 @@ a {
         .mobile-menu.open {
             max-height: 500px;
         }
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: #08bd4a;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-block;
+  animation: scroll-left 10s linear infinite;
+}
+
+.marquee-item {
+  display: inline-block;
+  margin-right: 4rem;
+  font-size: 1rem;
+  font-family: "Oswald";
+  color:#f8f9fa;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

@@ -6,134 +6,91 @@
     <title>Mi primera pagina - tienda</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="imagenes/logo.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/flatly/bootstrap.min.css">
-    <meta name="theme-color" content="#000">
-    <a href="chatbot.html">Chatbot</a>
-    <a href="juegos.html">Juegos</a>
-    <a rel="stylesheet" href="style.css"></a>
-    <script src="script.js" defer></script>
 </head>
-<body class="bg-gray-50 font-sans">
-    <nav class="navbar navbar-expand-lg bg-primary qq" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a href="#" onclick="scrollToClass('t')"><image class="navbar-brand dd" src="imagenes/logo.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Cambiar navegación">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarColor01">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link xx" href="index.html">Inicio
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link xx" href="chatbot.html">Chatbot</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link xx" href="juegos.html">Juegos</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle xx" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menú</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item active aaa" href="tienda.html">Tienda</a>
-              
-              <a class="dropdown-item aaa" href="#">Otro algo</a>
-              <a class="dropdown-item aaa" href="#">Algo más aquí</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item aaa" href="#">ABC123</a>
-            </div>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-sm-2" type="search" placeholder="Buscar">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
-      </div>
+<body>
+ <div class="marquee-container">
+    <div class="marquee-track">
+        <span class="marquee-item">TODO GRATIS</span>
+        <span class="marquee-item">| TODO GRATIS |</span>
+        <span class="marquee-item">| TODO GRATIS |</span>
+        <span class="marquee-item">| TODO GRATIS |</span>
+        <span class="marquee-item">| TODO GRATIS |</span>
+        <span class="marquee-item">| TODO GRATIS |</span>
     </div>
-  </nav>
-    <!-- Top Announcement Bar -->
-    <div class="bg-indigo-900 text-white text-center py-2 px-4">
-        <p class="text-sm">Free shipping on all orders over $50 | Use code <span class="font-bold">WELCOME10</span> for 10% off your first order</p>
-    </div>
-
-    <!-- Header/Navigation -->
+ </div>
     <header class="sticky top-0 z-50 bg-white shadow-sm">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <button id="mobile-menu-button" class="md:hidden hover:text-green-700">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
-                
-                <!-- Logo -->
                 <div class="flex items-center">
-                    <a href="#" class="text-2xl font-bold text-indigo-700">LuxeCart</a>
+                    <img class="dd hy" src="imagenes/logo.png">
+                    <a href="#" class="text-2xl font-bold text-green-700">TIENDA</a>
                 </div>
                 
-                <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+                    <a href="index.html" class="text-gray-700 hover:text-green-700 text-sm md:text-lg font-medium">Inicio</a>
                     <div class="dropdown relative">
-                        <button class="text-gray-700 hover:text-indigo-600 font-medium flex items-center">
-                            Shop <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        <button class="text-gray-700 hover:text-green-700 text-sm md:text-lg font-medium flex items-center">
+                            Productos <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </button>
                         <div class="dropdown-menu absolute hidden mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-10">
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">All Products</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">New Arrivals</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Best Sellers</a>
-                            <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-indigo-50">Sale</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 text-sm md:text-base hover:bg-indigo-50">Todos los productos</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 text-sm md:text-base hover:bg-indigo-50">Nuevos productos</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 text-sm md:text-base hover:bg-indigo-50">Más vendidos</a>
+                            <a href="#" class="block px-4 py-2 text-gray-700 text-sm md:text-base hover:bg-indigo-50">Productos disponibles</a>
                         </div>
                     </div>
-                    <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">About</a>
-                    <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Contact</a>
+                    <a href="#" class="text-gray-700 text-sm md:text-lg hover:text-green-700 font-medium">Más información</a>
+                    <a href="#" class="text-gray-700 text-sm md:text-lg hover:text-green-700 font-medium">Contactos</a>
                 </nav>
                 
-                <!-- Icons -->
-                <div class="flex items-center space-x-6">
-                    <button class="text-gray-700 hover:text-indigo-600">
-                        <i class="fas fa-search text-xl"></i>
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-700 hover:text-green-700">
+                        <i class="fas fa-search text-xl md:text-3xl"></i>
                     </button>
-                    <button class="text-gray-700 hover:text-indigo-600 relative">
-                        <i class="fas fa-user text-xl"></i>
+                    <button class="text-gray-700 hover:text-green-700 relative">
+                        <i class="fas fa-user text-xl md:text-3xl"></i>
                     </button>
-                    <button id="cart-button" class="text-gray-700 hover:text-indigo-600 relative">
-                        <i class="fas fa-shopping-cart text-xl"></i>
-                        <span id="cart-count" class="absolute -top-2 -right-2 bg-indigo-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                    <button id="cart-button" class="text-gray-700 hover:text-green-700 relative">
+                        <i class="fas fa-shopping-cart text-xl md:text-3xl"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-green-700 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
                     </button>
                 </div>
             </div>
-            
-            <!-- Mobile Navigation -->
+        
             <div id="mobile-menu" class="mobile-menu md:hidden mt-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600">Home</a>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-green-700">Inicio</a>
                     <div class="flex flex-col">
-                        <button class="flex justify-between items-center py-2 text-gray-700 hover:text-indigo-600">
-                            <span>Shop</span>
+                        <button class="flex justify-between items-center py-2 text-gray-700 hover:text-green-700">
+                            <span>Productos</span>
                             <i class="fas fa-chevron-down text-xs"></i>
                         </button>
                         <div class="pl-4 hidden">
-                            <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600">All Products</a>
-                            <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600">New Arrivals</a>
-                            <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600">Best Sellers</a>
-                            <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600">Sale</a>
+                            <a href="#" class="block py-2 text-gray-700 hover:text-green-700">Todos los productos</a>
+                            <a href="#" class="block py-2 text-gray-700 hover:text-green-700">Nuevos productos</a>
+                            <a href="#" class="block py-2 text-gray-700 hover:text-green-700">Más vendidos</a>
+                            <a href="#" class="block py-2 text-gray-700 hover:text-green-700">Productos disponibles</a>
                         </div>
                     </div>
-                    <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600">About</a>
-                    <a href="#" class="block py-2 text-gray-700 hover:text-indigo-600">Contact</a>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-green-700">Más información</a>
+                    <a href="#" class="block py-2 text-gray-700 hover:text-green-700">Contactos</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20">
+    <section class="bg-gradient-to-r from-green-800 to-green-400 text-white py-20">
         <div class="container mx-auto px-4">
             <div class="max-w-2xl">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Summer Collection 2023</h1>
-                <p class="text-xl mb-8">Discover our premium selection of products designed for your lifestyle</p>
-                <a href="#" class="bg-white text-indigo-700 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 inline-block">Shop Now</a>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">EN DESCUENTO
+                </h1>
+                <p class="text-xl mb-8">SÓLO POR HOY ÑIÑIÑIÑIÑIÑI</p>
+                <a href="#" class="bg-white text-green-800 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 inline-block">Comprar</a>
             </div>
         </div>
     </section>
@@ -411,7 +368,7 @@
             </div>
         </div>
     </div>
-
+ </div>
     <script>
         // Sample product data
         const products = [
@@ -655,6 +612,7 @@
                     `;
                     cartItemsContainer.appendChild(cartItem);
                 });
+            
                 
                 // Update subtotal
                 cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
