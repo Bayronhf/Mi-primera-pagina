@@ -12,12 +12,7 @@
 <body>
  <div class="marquee-container">
     <div class="marquee-track">
-        <span class="marquee-item">TODO GRATIS</span>
-        <span class="marquee-item">| TODO GRATIS |</span>
-        <span class="marquee-item">| TODO GRATIS |</span>
-        <span class="marquee-item">| TODO GRATIS |</span>
-        <span class="marquee-item">| TODO GRATIS |</span>
-        <span class="marquee-item">| TODO GRATIS |</span>
+      
     </div>
  </div>
     <header class="sticky top-0 z-50 bg-white shadow-sm">
@@ -95,35 +90,34 @@
         </div>
     </section>
 
-    <!-- Featured Categories -->
     <section class="py-12">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Categorias</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <a href="#" class="group">
+                <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img src="https://media.istockphoto.com/id/1201024668/es/foto/hombre-elegante-con-gafas-de-sol-y-camisa-blanca-vida-en-la-ciudad.jpg?s=612x612&w=0&k=20&c=aZcCXBpA6SrJx8Srym0hz4lFGwZQTWkJaJpgh0UXvJE=" alt="Men's Fashion" class="w-full h-full object-cover">
+                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] scale-[1.90] absolute left-4 transition-transform duration-500" src="https://media.istockphoto.com/id/1201024668/es/foto/hombre-elegante-con-gafas-de-sol-y-camisa-blanca-vida-en-la-ciudad.jpg?s=612x612&w=0&k=20&c=aZcCXBpA6SrJx8Srym0hz4lFGwZQTWkJaJpgh0UXvJE=" alt="Men's Fashion" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Para hombres</h3>
                     </div>
                 </a>
-                <a href="#" class="group">
+                <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img src="https://sopotey.com/blog/wp-content/uploads/2024/02/ropa-de-mujer-elegante-y-moderna.jpg" alt="Women's Fashion" class="w-full h-full object-cover">
+                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] scale-[2.10] absolute right-16 sm:left-4 transition-transform duration-500" src="https://sopotey.com/blog/wp-content/uploads/2024/02/ropa-de-mujer-elegante-y-moderna.jpg" alt="Women's Fashion" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Para mujeres</h3>
                     </div>
                 </a>
-                <a href="#" class="group">
+                <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img src="https://www.robertomartin.com/fotos-gafas/2023/04/gafas-de-sol-atemporales-no-pasan-de-moda.jpg">
+                        <img class="sm:scale-150 scale-[2.50] absolute left-2 translate-y-[10px] sm:group-hover:scale-[1.60] transition-transform duration-500" src="https://www.robertomartin.com/fotos-gafas/2023/04/gafas-de-sol-atemporales-no-pasan-de-moda.jpg">
                         <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Accesorios</h3>
                     </div>
                 </a>
-                <a href="#" class="group">
+                <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img src="https://www.prensalibre.com/wp-content/uploads/2023/06/55011260824_1.jpg?quality=52">
+                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] scale-[1.80] absolute right-4 transition-transform duration-500" src="https://www.prensalibre.com/wp-content/uploads/2023/06/55011260824_1.jpg?quality=52">
                         <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Para el hogar</h3>
                     </div>
@@ -450,6 +444,8 @@
         const addToCartQuickButton = document.getElementById('add-to-cart-quick');
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+        const gratis = document.getElementsByClassName("marquee-track")[0];
+        let repeticion = 20;
 
         function renderProducts() {
             productGrid.innerHTML = '';
@@ -459,7 +455,7 @@
                 productCard.className = 'bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300';
                 productCard.innerHTML = `
                     <div class="relative">
-                        <img src="${product.image}" alt="${product.title}" class="w-full h-64 object-cover">
+                        <img src="${product.image}" alt="${product.title}" class=" w-full h-64 object-cover">
                         <div class="absolute top-2 right-2 bg-green-700 text-white text-xs font-bold px-2 py-1 rounded-full">NUEVO</div>
                         <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
                             <button class="quick-view-button bg-white text-green-700 px-4 py-2 rounded-full font-medium" data-id="${product.id}">
@@ -675,8 +671,15 @@
 
         mobileMenuButton.addEventListener('click', toggleMobileMenu);
 
-        // Initialize the page
         renderProducts();
+
+        for (let i=0; i<repeticion; i++) {
+            const span = document.createElement("span");
+            span.className = "marquee-item";
+            span.textContent = i === 0 ? "| TODO GRATIS |" : "| TODO GRATIS |";
+            gratis.appendChild(span);
+        }
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
