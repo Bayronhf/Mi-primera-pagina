@@ -29,10 +29,10 @@
                 <nav class="hidden md:flex space-x-8">
                     <a href="index.html" class="text-gray-700 hover:text-green-700 text-sm md:text-lg font-medium">Inicio</a>
                     <div class="dropdown relative">
-                        <button class="text-gray-700 hover:text-green-700 text-sm md:text-lg font-medium flex items-center">
+                        <button id="productosbtn" class="text-gray-700 hover:text-green-700 text-sm md:text-lg font-medium flex items-center">
                             Productos <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </button>
-                        <div class="dropdown-menu absolute hidden mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-10">
+                        <div id="submenu" class="absolute hidden mt-2 py-2 w-48 bg-white rounded-md shadow-lg z-10">
                             <a href="#" class="block px-4 py-2 text-gray-700 text-sm md:text-base hover:bg-green-50">Todos los productos</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 text-sm md:text-base hover:bg-green-50">Nuevos productos</a>
                             <a href="#" class="block px-4 py-2 text-gray-700 text-sm md:text-base hover:bg-green-50">Más vendidos</a>
@@ -61,11 +61,11 @@
                 <div class="flex flex-col space-y-3">
                     <a href="index.html" class="block py-2 text-gray-700 hover:text-green-700">Inicio</a>
                     <div class="flex flex-col">
-                        <button class="flex justify-between items-center py-2 text-gray-700 hover:text-green-700">
+                        <button id="productosMobileBtn" class="flex justify-between items-center py-2 text-gray-700 hover:text-green-700">
                             <span>Productos</span>
                             <i class="fas fa-chevron-down text-xs"></i>
                         </button>
-                        <div class="pl-4 hidden">
+                        <div id="submenuMobile" class="pl-4 hidden">
                             <a href="#" class="block py-2 text-gray-700 hover:text-green-700">Todos los productos</a>
                             <a href="#" class="block py-2 text-gray-700 hover:text-green-700">Nuevos productos</a>
                             <a href="#" class="block py-2 text-gray-700 hover:text-green-700">Más vendidos</a>
@@ -96,28 +96,28 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] scale-[1.90] absolute left-4 transition-transform duration-500" src="https://media.istockphoto.com/id/1201024668/es/foto/hombre-elegante-con-gafas-de-sol-y-camisa-blanca-vida-en-la-ciudad.jpg?s=612x612&w=0&k=20&c=aZcCXBpA6SrJx8Srym0hz4lFGwZQTWkJaJpgh0UXvJE=" alt="Men's Fashion" class="w-full h-full object-cover">
+                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] group-hover:scale-[2.10] scale-[1.90] absolute left-4 transition-transform duration-500" src="https://media.istockphoto.com/id/1201024668/es/foto/hombre-elegante-con-gafas-de-sol-y-camisa-blanca-vida-en-la-ciudad.jpg?s=612x612&w=0&k=20&c=aZcCXBpA6SrJx8Srym0hz4lFGwZQTWkJaJpgh0UXvJE=" alt="Men's Fashion" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Para hombres</h3>
                     </div>
                 </a>
                 <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] scale-[2.10] absolute right-16 sm:left-4 transition-transform duration-500" src="https://sopotey.com/blog/wp-content/uploads/2024/02/ropa-de-mujer-elegante-y-moderna.jpg" alt="Women's Fashion" class="w-full h-full object-cover">
+                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] group-hover:scale-[2.30] scale-[2.10] absolute right-16 sm:left-4 transition-transform duration-500" src="https://sopotey.com/blog/wp-content/uploads/2024/02/ropa-de-mujer-elegante-y-moderna.jpg" alt="Women's Fashion" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Para mujeres</h3>
                     </div>
                 </a>
                 <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img class="sm:scale-150 scale-[2.50] absolute left-2 translate-y-[10px] sm:group-hover:scale-[1.60] transition-transform duration-500" src="https://www.robertomartin.com/fotos-gafas/2023/04/gafas-de-sol-atemporales-no-pasan-de-moda.jpg">
+                        <img class="sm:scale-150 scale-[2.50] absolute left-2 translate-y-[10px] group-hover:scale-[2.70] sm:group-hover:scale-[1.60] transition-transform duration-500" src="https://www.robertomartin.com/fotos-gafas/2023/04/gafas-de-sol-atemporales-no-pasan-de-moda.jpg">
                         <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Accesorios</h3>
                     </div>
                 </a>
                 <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] scale-[1.80] absolute right-4 transition-transform duration-500" src="https://www.prensalibre.com/wp-content/uploads/2023/06/55011260824_1.jpg?quality=52">
+                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] group-hover:scale-[2.00] scale-[1.80] absolute right-4 transition-transform duration-500" src="https://www.prensalibre.com/wp-content/uploads/2023/06/55011260824_1.jpg?quality=52">
                         <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Para el hogar</h3>
                     </div>
@@ -367,7 +367,7 @@
             },
             {
                 id: 2,
-                title: "Reloj para Hombres – Aurum Chrono Black Edition",
+                title: "Reloj para Hombres – Aurum Chrono Silver Edition",
                 price: 149.99,
                 image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80",
                 description: "Diseño elegante y sofisticado con caja de acero inoxidable en tono negro mate. Cuenta con cronógrafo funcional, indicador de fecha y resistencia al agua de hasta 50 metros. Perfecto para quienes buscan estilo y precisión en un solo accesorio.",
@@ -445,6 +445,10 @@
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const gratis = document.getElementsByClassName("marquee-track")[0];
+        const desktopBtn = document.getElementById("productosbtn");
+        const desktopMenu = document.getElementById("submenu");
+        const mobileBtn = document.getElementById("productosMobileBtn");
+        const mbileMenu = document.getElementById("submenuMobile");
         let repeticion = 20;
 
         function renderProducts() {
@@ -678,7 +682,38 @@
             span.className = "marquee-item";
             span.textContent = i === 0 ? "| TODO GRATIS |" : "| TODO GRATIS |";
             gratis.appendChild(span);
-        }
+        };
+
+   document.addEventListener("DOMContentLoaded", () => {
+
+  if (desktopBtn && desktopMenu) {
+    desktopBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      desktopMenu.classList.toggle("hidden");
+    });
+  }
+  
+
+  if (mobileBtn && mbileMenu) {
+    mobileBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+      mbileMenu.classList.toggle("hidden");
+    });
+  }
+});
+
+ document.addEventListener("click", (e) => {
+    if (desktopMenu && !desktopMenu.classList.contains("hidden")) {
+      if (!desktopMenu.contains(e.target) && !desktopBtn.contains(e.target)) {
+        desktopMenu.classList.add("hidden");
+      }
+    }
+    if (mbileMenu && !mbileMenu.classList.contains("hidden")) {
+      if (!mbileMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
+        mbileMenu.classList.add("hidden");
+      }
+    }
+  });
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
