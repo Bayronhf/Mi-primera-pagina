@@ -96,29 +96,29 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] group-hover:scale-[2.10] scale-[1.90] absolute left-4 transition-transform duration-500" src="https://media.istockphoto.com/id/1201024668/es/foto/hombre-elegante-con-gafas-de-sol-y-camisa-blanca-vida-en-la-ciudad.jpg?s=612x612&w=0&k=20&c=aZcCXBpA6SrJx8Srym0hz4lFGwZQTWkJaJpgh0UXvJE=" alt="Men's Fashion" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
+                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] group-active:scale-[2.10] scale-[1.90] absolute left-4 transition-transform duration-500" src="https://media.istockphoto.com/id/1201024668/es/foto/hombre-elegante-con-gafas-de-sol-y-camisa-blanca-vida-en-la-ciudad.jpg?s=612x612&w=0&k=20&c=aZcCXBpA6SrJx8Srym0hz4lFGwZQTWkJaJpgh0UXvJE=" alt="Men's Fashion" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 group-active:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Para hombres</h3>
                     </div>
                 </a>
-                <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
+                <a href="#" onclick="event.preventDefault()" class="cursor-pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] group-hover:scale-[2.30] scale-[2.10] absolute right-16 sm:left-4 transition-transform duration-500" src="https://sopotey.com/blog/wp-content/uploads/2024/02/ropa-de-mujer-elegante-y-moderna.jpg" alt="Women's Fashion" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
+                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] group-active:scale-[2.30] scale-[2.10] absolute right-16 sm:left-4 transition-transform duration-500" src="https://sopotey.com/blog/wp-content/uploads/2024/02/ropa-de-mujer-elegante-y-moderna.jpg" alt="Women's Fashion" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 group-active:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Para mujeres</h3>
                     </div>
                 </a>
                 <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img class="sm:scale-150 scale-[2.50] absolute left-2 translate-y-[10px] group-hover:scale-[2.70] sm:group-hover:scale-[1.60] transition-transform duration-500" src="https://www.robertomartin.com/fotos-gafas/2023/04/gafas-de-sol-atemporales-no-pasan-de-moda.jpg">
-                        <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
+                        <img class="sm:scale-150 scale-[2.50] absolute left-2 translate-y-[10px] group-active:scale-[2.70] sm:group-hover:scale-[1.60] transition-transform duration-500" src="https://www.robertomartin.com/fotos-gafas/2023/04/gafas-de-sol-atemporales-no-pasan-de-moda.jpg">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 group-active:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Accesorios</h3>
                     </div>
                 </a>
                 <a href="#" onclick="event.preventDefault()" class="cursor: pointer group">
                     <div class="bg-gray-100 rounded-lg overflow-hidden h-48 flex items-center justify-center relative">
-                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] group-hover:scale-[2.00] scale-[1.80] absolute right-4 transition-transform duration-500" src="https://www.prensalibre.com/wp-content/uploads/2023/06/55011260824_1.jpg?quality=52">
-                        <div class="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-40 transition duration-300"></div>
+                        <img class="sm:scale-110 sm:group-hover:scale-[1.20] group-active:scale-[2.00] scale-[1.80] absolute right-4 transition-transform duration-500" src="https://www.prensalibre.com/wp-content/uploads/2023/06/55011260824_1.jpg?quality=52">
+                        <div class="absolute inset-0 bg-black bg-opacity-30 group-active:bg-opacity-40 transition duration-300"></div>
                         <h3 class="absolute text-white text-xl font-bold">Para el hogar</h3>
                     </div>
                 </a>
@@ -645,6 +645,7 @@
 
         function toggleMobileMenu() {
             mobileMenu.classList.toggle('open');
+            
         }
 
         cartButton.addEventListener('click', () => {
@@ -711,6 +712,13 @@
     if (mbileMenu && !mbileMenu.classList.contains("hidden")) {
       if (!mbileMenu.contains(e.target) && !mobileBtn.contains(e.target)) {
         mbileMenu.classList.add("hidden");
+      }
+    }
+    
+     if (mobileMenu && mobileMenu.classList.contains("open")) {
+      if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target)) {
+          mobileMenu.classList.remove("open");
+
       }
     }
   });
