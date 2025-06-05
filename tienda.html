@@ -282,6 +282,11 @@
     </div>
     <div id="cart-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
 
+    <!-- Botón flotante del chat -->
+    <div id="chat-float-btn" class="chat-float-button" onclick="window.location.href='chatbot.html'">
+        <i class="fas fa-comments"></i>
+    </div>
+
     <div id="quick-view-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
         <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div class="p-6">
@@ -313,10 +318,8 @@
                         
                         <div class="mb-6">
                             <label class="block text-gray-700 mb-2">Color</label>
-                            <div class="flex space-x-2">
-                                <button class="w-8 h-8 rounded-full bg-black border-2 border-gray-300 focus:border-green-500"></button>
-                                <button class="w-8 h-8 rounded-full bg-blue-500 border-2 border-gray-300 focus:border-green-500"></button>
-                                <button class="w-8 h-8 rounded-full bg-red-500 border-2 border-gray-300 focus:border-green-500"></button>
+                            <div class="flex space-x-2" id="product-colors">
+                                <!-- Los colores se agregarán dinámicamente aquí -->
                             </div>
                         </div>
                         
@@ -363,7 +366,12 @@
                 price: 199.99,
                 image: "https://assets.laboutiqueofficielle.com/w_360,q_auto,f_auto/media/products/2024/09/18/classic-series_436840_8866_BLACK_20241017T151934_01.jpg",
                 description: "Una chaqueta moderna con acabado mate que ofrece estilo y comodidad. Forro interior acolchado, bolsillos funcionales y cierre frontal con cremallera. Ideal para climas frescos y looks urbanos.",
-                category: "Para hombres"
+                category: "Para hombres",
+                colors: [
+                    { name: "Negro", hex: "#000000" },
+                    { name: "Marrón", hex: "#8B4513" },
+                    { name: "Gris", hex: "#808080" }
+                ]
             },
             {
                 id: 2,
@@ -371,7 +379,12 @@
                 price: 149.99,
                 image: "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80",
                 description: "Diseño elegante y sofisticado con caja de acero inoxidable en tono negro mate. Cuenta con cronógrafo funcional, indicador de fecha y resistencia al agua de hasta 50 metros. Perfecto para quienes buscan estilo y precisión en un solo accesorio.",
-                category: "Accessorios"
+                category: "Accessorios",
+                colors: [
+                    { name: "Plateado", hex: "#C0C0C0" },
+                    { name: "Dorado", hex: "#FFD700" },
+                    { name: "Negro", hex: "#000000" }
+                ]
             },
             {
                 id: 3,
@@ -379,7 +392,13 @@
                 price: 29.99,
                 image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80",
                 description: "Suavidad y frescura en cada uso. Fabricada con algodón 100% transpirable, corte regular y costuras reforzadas. Esencial en cualquier guardarropa.",
-                category: "Para hombres"
+                category: "Para hombres",
+                colors: [
+                    { name: "Blanco", hex: "#FFFFFF" },
+                    { name: "Negro", hex: "#000000" },
+                    { name: "Gris", hex: "#808080" },
+                    { name: "Azul marino", hex: "#000080" }
+                ]
             },
             {
                 id: 4,
@@ -387,7 +406,12 @@
                 price: 79.99,
                 image: "https://i5.walmartimages.com/asr/32c1b9dd-9d10-417a-a687-8a1cba93105e.f3bcadcb4ddfa2f086e9d6504c0f4b66.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
                 description: "Elegante y femenino, con cintura ajustada que favorece la silueta. Perfecto para eventos o salidas de verano.",
-                category: "Para mujeres"
+                category: "Para mujeres",
+                colors: [
+                    { name: "Rosa floral", hex: "rgb(197 110 122)" },
+                    { name: "Azul floral", hex: "#4169E1" },
+                    { name: "Verde floral", hex: "#228B22" }
+                ]
             },
             {
                 id: 5,
@@ -395,7 +419,12 @@
                 price: 59.99,
                 image: "https://karibik.co/cdn/shop/files/CHF015585_01.jpg?v=1747975666",
                 description: "Estilo retro con corte amplio. Confeccionada en denim de alta calidad, con detalles desgastados y bolsillos amplios. Ideal para un look relajado y actual.",
-                category: "Para mujeres"
+                category: "Para mujeres",
+                colors: [
+                    { name: "Azul claro", hex: "#87CEEB" },
+                    { name: "Azul oscuro", hex: "#000080" },
+                    { name: "Negro", hex: "#000000" }
+                ]
             },
             {
                 id: 6,
@@ -403,7 +432,7 @@
                 price: 39.99,
                 image: "https://image.made-in-china.com/202f0j00LfQqmrEJVDuT/Wireless-Charging-LED-Desk-Lamp-with-Calendar-Temperature-Alarm-Clock.webp",
                 description: "Diseño minimalista y funcional. Luz ajustable en 3 niveles, puerto USB y base con cargador inalámbrico Qi. Perfecta para estudio, trabajo o lectura.",
-                category: "Para el hogar"
+                category: "Para el hogar",
             },
             {
                 id: 7,
@@ -411,7 +440,7 @@
                 price: 129.99,
                 image: "https://ae01.alicdn.com/kf/H8e4f97cda0954249ac405856e1d71947h.jpg_640x640Q90.jpg_.webp",
                 description: "Clásicas y atemporales. Montura metálica liviana con lentes polarizadas UV400. Aportan protección y estilo en cualquier temporada.",
-                category: "Accesorios"
+                category: "Accesorios",
             },
             {
                 id: 8,
@@ -419,7 +448,7 @@
                 price: 34.99,
                 image: "https://www.mesasyplegables.com/893-large_default/set-3-repisas-flotantes-modernas-10cm-fondo.jpg",
                 description: "SConjunto de repisas elegantes para decoración u organización. Hechas en madera natural, fáciles de instalar. Añade calidez y funcionalidad a cualquier habitación.",
-                category: "Para el hogar"
+                category: "Para el hogar",
             }
         ];
 
@@ -450,6 +479,7 @@
         const mobileBtn = document.getElementById("productosMobileBtn");
         const mbileMenu = document.getElementById("submenuMobile");
         let repeticion = 20;
+        let selectedColor = null;
 
         function renderProducts() {
             productGrid.innerHTML = '';
@@ -508,40 +538,65 @@
         function addToCart(productId) {
             const product = products.find(p => p.id === productId);
             if (!product) return;
-            
-            const existingItem = cart.find(item => item.id === productId);
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({
-                    ...product,
-                    quantity: 1
-                });
+
+    if (product.colors && quickViewModal && !quickViewModal.classList.contains('hidden')) {
+        let colorContainer = document.getElementById('product-colors');
+        let colorBlock = colorContainer.parentElement;
+        let colorError = colorBlock.querySelector('#color-error-msg');
+        if (!selectedColor) {
+            if (!colorError) {
+                colorError = document.createElement('div');
+                colorError.id = 'color-error-msg';
+                colorError.className = 'text-red-600 text-sm mt-2';
+                colorBlock.appendChild(colorError); // Se agrega al final del bloque de colores
             }
-            
-            updateCart();
-            
-            const notification = document.createElement('div');
-            notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-md shadow-lg';
-            notification.textContent = `${product.title} Agregado al carrito`;
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.classList.add('opacity-0', 'transition-opacity', 'duration-300');
-                setTimeout(() => notification.remove(), 300);
-            }, 2000);
+            colorError.textContent = 'Por favor selecciona un color.';
+            colorError.style.display = 'block';
+            return false;
+        } else {
+            if (colorError) colorError.style.display = 'none';
+        }
+    }
+
+    const existingItem = cart.find(item =>
+        item.id === productId &&
+        (!product.colors || item.color === selectedColor)
+    );
+
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            ...product,
+            quantity: 1,
+            color: product.colors ? (selectedColor || product.colors[0].name) : null
+        });
+    }
+
+    updateCart();
+    selectedColor = null;
+
+    const notification = document.createElement('div');
+    notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-md shadow-lg';
+    notification.textContent = `${product.title} ${selectedColor ? `(${selectedColor})` : ''} agregado al carrito`;
+    document.body.appendChild(notification);
+
+    setTimeout(() => {
+        notification.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+        setTimeout(() => notification.remove(), 300);
+    }, 2000);
         }
 
-        function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
+        function removeFromCart(productId, color) {
+            cart = cart.filter(item => !(item.id === productId && item.color === color));
             updateCart();
         }
 
-        function updateQuantity(productId, newQuantity) {
-            const item = cart.find(item => item.id === productId);
+        function updateQuantity(productId, newQuantity, color) {
+            const item = cart.find(item => item.id === productId && item.color === color);
             if (item) {
                 if (newQuantity < 1) {
-                    removeFromCart(productId);
+                    removeFromCart(productId, color);
                 } else {
                     item.quantity = newQuantity;
                 }
@@ -576,16 +631,19 @@
                         </div>
                         <div class="flex-grow">
                             <div class="flex justify-between">
-                                <h4 class="font-medium">${item.title}</h4>
-                                <button class="remove-item text-gray-500 hover:text-red-500" data-id="${item.id}">
+                                <div>
+                                    <h4 class="font-medium">${item.title}</h4>
+                                    ${item.color ? `<p class="text-sm text-gray-500">Color: ${item.color}</p>` : ''}
+                                </div>
+                                <button class="remove-item text-gray-500 hover:text-red-500" data-id="${item.id}" data-color="${item.color}">
                                     <i class="fas fa-times"></i>
                                 </button>
                             </div>
                             <p class="text-sm text-gray-600 mb-2">$${item.price.toFixed(2)}</p>
                             <div class="flex items-center">
-                                <button class="decrease-quantity px-2 py-1 border border-gray-300 rounded-l-md" data-id="${item.id}">-</button>
+                                <button class="decrease-quantity px-2 py-1 border border-gray-300 rounded-l-md" data-id="${item.id}" data-color="${item.color}">-</button>
                                 <span class="quantity px-3 py-1 border-t border-b border-gray-300">${item.quantity}</span>
-                                <button class="increase-quantity px-2 py-1 border border-gray-300 rounded-r-md" data-id="${item.id}">+</button>
+                                <button class="increase-quantity px-2 py-1 border border-gray-300 rounded-r-md" data-id="${item.id}" data-color="${item.color}">+</button>
                             </div>
                         </div>
                     `;
@@ -597,16 +655,18 @@
                 document.querySelectorAll('.remove-item').forEach(button => {
                     button.addEventListener('click', (e) => {
                         const productId = parseInt(e.target.closest('button').getAttribute('data-id'));
-                        removeFromCart(productId);
+                        const color = e.target.closest('button').getAttribute('data-color');
+                        removeFromCart(productId, color);
                     });
                 });
                 
                 document.querySelectorAll('.decrease-quantity').forEach(button => {
                     button.addEventListener('click', (e) => {
                         const productId = parseInt(e.target.getAttribute('data-id'));
-                        const item = cart.find(item => item.id === productId);
+                        const color = e.target.getAttribute('data-color');
+                        const item = cart.find(item => item.id === productId && item.color === color);
                         if (item) {
-                            updateQuantity(productId, item.quantity - 1);
+                            updateQuantity(productId, item.quantity - 1, color);
                         }
                     });
                 });
@@ -614,9 +674,10 @@
                 document.querySelectorAll('.increase-quantity').forEach(button => {
                     button.addEventListener('click', (e) => {
                         const productId = parseInt(e.target.getAttribute('data-id'));
-                        const item = cart.find(item => item.id === productId);
+                        const color = e.target.getAttribute('data-color');
+                        const item = cart.find(item => item.id === productId && item.color === color);
                         if (item) {
-                            updateQuantity(productId, item.quantity + 1);
+                            updateQuantity(productId, item.quantity + 1, color);
                         }
                     });
                 });
@@ -634,13 +695,53 @@
             quickViewDescription.textContent = product.description;
             addToCartQuickButton.setAttribute('data-id', product.id);
             
-            quickViewModal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
+            const colorContainer = document.getElementById('product-colors');
+            const colorLabel = colorContainer?.previousElementSibling;
+            colorContainer.innerHTML = '';
+            selectedColor = null; // Resetear el color seleccionado
+
+    // Mostrar u ocultar el bloque de color según si el producto tiene colores
+    const colorBlock = colorContainer.parentElement;
+    if (product.colors && product.colors.length > 0) {
+        colorBlock.style.display = '';
+        colorLabel.style.display = '';
+        product.colors.forEach(color => {
+            const colorButton = document.createElement('button');
+            colorButton.className = 'w-8 h-8 rounded-full border-2 border-gray-300 focus:border-green-500 transition-all duration-200';
+            colorButton.style.backgroundColor = color.hex;
+            colorButton.setAttribute('title', color.name);
+            colorButton.setAttribute('data-color', color.name);
+            
+            if (color.hex === '#000000' || color.hex === '#000080' || color.hex === '#8B4513') {
+                colorButton.style.border = '1px solid white';
+            }
+            
+            colorButton.onclick = () => {
+                colorContainer.querySelectorAll('button').forEach(btn => {
+                    btn.classList.remove('ring-2', 'ring-green-500', 'scale-110');
+                });
+                colorButton.classList.add('ring-2', 'ring-green-500', 'scale-110');
+                selectedColor = color.name;
+            };
+            colorContainer.appendChild(colorButton);
+        });
+    } else {
+        colorBlock.style.display = 'none';
+    }
+
+    quickViewModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
 
         function closeQuickView() {
             quickViewModal.classList.add('hidden');
             document.body.style.overflow = '';
+            selectedColor = null; // Resetear el color seleccionado al cerrar
+            // Eliminar mensaje de error si existe
+            const colorError = document.getElementById('color-error-msg');
+            if (colorError) {
+                colorError.remove();
+            }
         }
 
         function toggleMobileMenu() {
@@ -667,11 +768,22 @@
         });
 
         closeQuickViewButton.addEventListener('click', closeQuickView);
-        
+
+        // Cerrar vista previa al hacer clic fuera
+        quickViewModal.addEventListener('click', (event) => {
+            const quickViewContent = quickViewModal.querySelector('.bg-white');
+            if (!quickViewContent.contains(event.target)) {
+                closeQuickView();
+            }
+        });
+
         addToCartQuickButton.addEventListener('click', (e) => {
             const productId = parseInt(e.target.getAttribute('data-id'));
-            addToCart(productId);
-            closeQuickView();
+            // Si addToCart retorna false, no cerrar la vista previa
+            const added = addToCart(productId);
+            if (added !== false) {
+                closeQuickView();
+            }
         });
 
         mobileMenuButton.addEventListener('click', toggleMobileMenu);

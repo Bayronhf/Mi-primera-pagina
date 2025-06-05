@@ -8,29 +8,100 @@ function scrollToClass(className) {
 
 //el chatbot//
 
-  async function enviar() {
-      const input = document.getElementById("userInput").value;
-      const respuestaEl = document.getElementById("respuesta");
+async function enviar() {
+    const input = document.getElementById("userInput").value;
+    if (!input.trim()) return;
 
-      const response = await fetch("https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta", {
-        method: "POST",
-        headers: {
-          "Authorization": "Bearer ",
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          inputs: "<|user|>\nHola\n<|assistant|>"
+    const chatMessages = document.getElementById("chat-messages");
+    
+    // Agregar mensaje del usuario
+    const userMessage = document.createElement("div");
+    userMessage.className = "chat-message user";
+    userMessage.innerHTML = `
+        <div class="chat-bubble">${input}</div>
+        <div class="chat-avatar user">
+            <i class="fas fa-user"></i>
+        </div>
+    `;
+    chatMessages.appendChild(userMessage);
+    
+    // Limpiar input
+    document.getElementById("userInput").value = "";
+    
+    // Mostrar indicador de escritura
+    const typingMessage = document.createElement("div");
+    typingMessage.className = "chat-message bot";
+    typingMessage.innerHTML = `
+        <div class="chat-avatar bot">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="chat-bubble">
+            <i class="fas fa-ellipsis-h"></i>
+        </div>
+    `;
+    chatMessages.appendChild(typingMessage);
+    
+    // Scroll al fondo
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 
-        })
-      });
+    try {
+        const response = await fetch("https://api-inference.huggingface.co/models/HuggingFaceH4/zephyr-7b-beta", {
+            method: "POST",
+            headers: {
+                "Authorization": "Bearer ",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                inputs: "<|user|>\n" + input + "\n<|assistant|>"
+            })
+        });
 
-      const data = await response.json();
-      if (data.error) {
-        respuestaEl.textContent = "Error: " + data.error;
-      } else {
-        respuestaEl.textContent = data.generated_text || JSON.stringify(data, null, 2);
-      }
+        const data = await response.json();
+        
+        // Eliminar indicador de escritura
+        chatMessages.removeChild(typingMessage);
+        
+        // Agregar respuesta del bot
+        const botMessage = document.createElement("div");
+        botMessage.className = "chat-message bot";
+        botMessage.innerHTML = `
+            <div class="chat-avatar bot">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-bubble">
+                ${data.error ? "Lo siento, hubo un error. Por favor, intenta de nuevo." : data.generated_text || "No pude generar una respuesta."}
+            </div>
+        `;
+        chatMessages.appendChild(botMessage);
+        
+        // Scroll al fondo
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    } catch (error) {
+        // Eliminar indicador de escritura
+        chatMessages.removeChild(typingMessage);
+        
+        // Mostrar mensaje de error
+        const errorMessage = document.createElement("div");
+        errorMessage.className = "chat-message bot";
+        errorMessage.innerHTML = `
+            <div class="chat-avatar bot">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chat-bubble">
+                Lo siento, ocurrió un error al procesar tu mensaje. Por favor, intenta de nuevo.
+            </div>
+        `;
+        chatMessages.appendChild(errorMessage);
     }
+}
+
+// Agregar evento para enviar con Enter
+document.getElementById("userInput").addEventListener("keypress", function(event) {
+    if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        enviar();
+    }
+});
 
 //juego 1//
 

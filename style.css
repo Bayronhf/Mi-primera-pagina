@@ -380,3 +380,134 @@ a {
     transform: translateX(-50%);
   }
 }
+
+/* Estilos del Chatbot */
+.chat-container {
+    max-height: 500px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.chat-messages {
+    height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.chat-message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.chat-message.user {
+    flex-direction: row-reverse;
+}
+
+.chat-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.chat-avatar.user {
+    background-color: #18bc9c;
+    color: white;
+}
+
+.chat-avatar.bot {
+    background-color: #3498db;
+    color: white;
+}
+
+.chat-bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.chat-message.user .chat-bubble {
+    background-color: #18bc9c;
+    color: white;
+    border-top-right-radius: 5px;
+}
+
+.chat-message.bot .chat-bubble {
+    background-color: #e9ecef;
+    color: #2c3e50;
+    border-top-left-radius: 5px;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    height: 45px;
+    font-size: 14px;
+}
+
+.chat-send-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #18bc9c;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-send-btn:hover {
+    background-color: #128f76;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botón flotante del chat */
+.chat-float-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #18bc9c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.chat-float-button:hover {
+    transform: scale(1.1);
+    background-color: #128f76;
+}
