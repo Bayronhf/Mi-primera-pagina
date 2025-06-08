@@ -1,0 +1,687 @@
+#olvidar {
+    font-size: 17px;
+}
+
+.t {/*titulo*/
+    font-family: "Oswald", sans-serif !important;
+    font-size: 60px;
+}
+
+@media (max-width: 600px)  {/*footer*/
+    .hh {
+        padding: 10px !important;
+        font-size: 0.8rem !important;
+    }
+ }
+
+.bb {/*letras de encuesta*/
+    cursor: pointer !important;
+    
+      
+}
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+    box-shadow: none !important;
+}
+  
+
+.ee { /*toda la pantalla*/
+    padding-top: 10px !important;
+}
+
+.qq, .hhhh {/*banner*/
+    position: fixed !important;
+    top: 0px !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    padding-top: 10px !important;
+}
+
+.e {/*imagen*/
+        width: 700px;
+        height: auto;
+        transition: all 0.3s ease-in-out !important;
+    }
+
+.e:hover {
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5) !important;
+    transform: scale(1.05) !important;
+}
+
+.k {
+    width: 50% !important;
+}
+
+tr:hover td {
+    background-color: rgb(24, 188, 156) !important;
+}
+
+.z {
+    vertical-align: inherit;
+    vertical-align: inherit;
+}
+
+.c {
+    font-size: 30px;
+}
+
+.xx {/*letras banner*/
+     font-size: 20px !important;
+}
+
+@media (max-width: 600px) {
+    .xx {/*letras banner*/
+      font-size: 1.2rem !important;
+  }
+}
+
+.aaa {/*menu desplegable*/
+    font-size: 15px !important;
+}
+
+#abc {
+    font-size: 17px;
+}
+
+.dd {/*imagen-logo*/
+    width: 50px !important;
+    height: auto !important;
+}
+
+.hy {
+    margin-right: 20px;
+    margin-left: -20px;
+}
+
+.dd:hover {
+    filter: brightness(0.5) !important;
+    transition: 0.3s !important;
+    cursor: pointer;
+}
+
+#menu {
+    font-size: 20px;
+}
+
+#w {
+    font-size: 25px;
+}
+
+#e {
+    font-family: "Oswald";
+    text-align: center;
+}
+
+#r {
+    background-color: rgb(85, 245, 85);
+}
+
+#t {
+          padding: 20px;
+          border-width: 2px;
+          border-style: solid;
+          border-color: gray;       
+}
+
+#y {
+    margin: 5px;
+}
+
+.pa {
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.centrar-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#contenedor {
+    flex-wrap: wrap;
+    background-color: black;
+    flex-direction: column;
+}
+
+#color {
+    font-size: 20px;
+    color: white;
+}
+
+#boton {
+    background-color: hsl(168, 88%, 22%);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#boton:hover {
+    background-color: hwb(168 2% 72%);
+}
+
+#pantalla{
+    margin: 0;
+    overflow: hidden;
+    background: rgb(16, 141, 224);
+}
+
+#game {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom, #1a1a1a 0%, #4d4d4d 100%);
+    overflow: hidden;
+}
+
+#player {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background-image: url('imagenes/caminar1.png');
+    background-size: cover;
+    background-position: center;
+    bottom: 50px;
+    left: 50px;
+}
+
+.obstacle {
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    background-color: #55aaff;
+    bottom: 50px;
+}
+
+#ground {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    background: linear-gradient(to bottom, #555 0%, #222 100%);
+}
+
+.building {
+    position: absolute;
+    bottom: 50px;
+    background: #444;
+    width: 80px;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    display: none;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#restart {
+    background: #ff5555;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) { #game {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+  #player {
+    width: 30px;
+    height: 50px;
+  }
+
+  .obstacle {
+    width: 20px;
+    height: 30px;
+  }
+
+  .building {
+    width: 60px;
+  }
+
+  #score {
+    font-size: 18px;
+  }
+
+  #gameOver {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  #restart {
+    padding: 7px 13px;
+    margin-top: 13px;
+    font-size: 12px;
+}
+}
+
+.meu {
+  margin: 20px 0;
+  font-family: 'Oswald', sans-serif;
+}
+
+.menu-toggle {
+  width: 100%;
+  padding: 12px;
+  background-color: #52b79b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: left;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+.menu-toggle:hover {
+  background-color: hsl(163, 36%, 48%);
+}
+
+.menu-content {
+  display: none;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+ .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cart-item-enter {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        .cart-item-enter-active {
+            opacity: 1;
+            transform: translateX(0);
+            transition: all 300ms ease-out;
+        }
+        .cart-item-exit {
+            opacity: 1;
+        }
+        .cart-item-exit-active {
+            opacity: 0;
+            transform: translateX(20px);
+            transition: all 300ms ease-out;
+        }
+        
+       /* .dropdown:hover .dropdown-menu {
+            display: block;
+        }*/
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: #08bd4a;
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-block;
+  animation: scroll-left 10s linear infinite;
+}
+
+.marquee-item {
+  display: inline-block;
+  margin-right: 4rem;
+  font-size: 1rem;
+  font-family: "Oswald";
+  color:#f8f9fa;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Estilos del Chatbot */
+.chat-container {
+    max-height: 500px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.chat-messages {
+    height: 350px;
+    overflow-y: auto;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.chat-message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.chat-message.user {
+    flex-direction: row-reverse;
+}
+
+.chat-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.avatar1 {
+    width: 100%;
+    height: 100%;
+}
+
+.avatar2 {
+    width: 35px;
+    height: 50px;
+}
+
+
+.chat-bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.chat-message.user .chat-bubble {
+    background-color: #18bc9c;
+    color: white;
+    border-top-right-radius: 5px;
+}
+
+.chat-message.bot .chat-bubble {
+    background-color: #e9ecef;
+    color: #2c3e50;
+    border-top-left-radius: 5px;
+}
+
+.chat-input-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    height: 45px;
+    font-size: 14px;
+}
+
+.chat-send-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #1c8a72;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.chat-send-btn:hover {
+    background-color: #145e4f;
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Botón flotante del chat */
+.chat-float-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #178d64;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.chat-float-button:hover {
+    transform: scale(1.1);
+    background-color: #13503a;
+}
+
+/* Memory Game Styles */
+#memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#memory-game div {
+    height: 100px;
+    background-color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+}
+
+#memory-game div.matched {
+    background-color: #18bc9c;
+    cursor: default;
+}
+
+/* Space Shooter Styles */
+#game {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(to bottom, #000033 0%, #000066 100%);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#player {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #18bc9c;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #18bc9c;
+    transition: all 0.1s ease;
+}
+
+.bullet {
+    position: absolute;
+    width: 10px;
+    height: 4px;
+    background: #18bc9c;
+    box-shadow: 0 0 5px #18bc9c;
+}
+
+.enemy {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #e74c3c;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #e74c3c;
+}
+
+.power-up {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#health-bar {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 200px;
+    height: 20px;
+    background: #333;
+    border: 2px solid #fff;
+}
+
+#health-fill {
+    width: 100%;
+    height: 100%;
+    background: #18bc9c;
+    transition: width 0.3s;
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    display: none;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 100;
+}
+
+#restart {
+    background: #18bc9c;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#restart:hover {
+    background: #149c82;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    #memory-game {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #memory-game div {
+        height: 80px;
+        font-size: 30px;
+    }
+
+    #game {
+        height: 300px;
+    }
+
+    #player {
+        width: 30px;
+        height: 30px;
+    }
+
+    #score {
+        font-size: 17px;
+        margin-top: 1px;
+    }
+
+    #gameOver {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    #restart {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    #health-bar {
+    top: 21px;
+    left: 10px;
+    width: 150px;
+}
+}
